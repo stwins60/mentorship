@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/Abbyabiola/mentorshippr.git'
+                git branch: 'master', url: 'https://github.com/stwins60/mentorship.git'
             }
         }
         stage('Sonarqube Analysis') {
