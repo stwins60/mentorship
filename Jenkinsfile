@@ -20,8 +20,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv('sonar-server') {
-                        sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=mentorship -Dsonar.projectName=mentorship 
-                        -Dsonar.sources=. -Dsonar.host.url=http://192.168.0.43:9000 -Dsonar.login=sqp_7cae4e4bc6fe05012f48ccbcf27544c46fd64318"
+                        sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=mentorship -Dsonar.projectName=mentorship -Dsonar.sources=. -Dsonar.host.url=http://192.168.0.43:9000 -Dsonar.login=sqp_7cae4e4bc6fe05012f48ccbcf27544c46fd64318"
                     }
                 }
             }
