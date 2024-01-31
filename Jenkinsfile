@@ -40,8 +40,9 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker buildx create context --name "jenkins-buildx" --use'
-                sh "docker buildx build -t idrisniyi94/mentorship:latest --platform linux/amd64,linux/arm64,linux/arm/v7 ."
+                // sh 'docker buildx create context --name "jenkins-buildx" --use'
+                // sh "docker buildx build -t idrisniyi94/mentorship:latest --platform linux/amd64,linux/arm64,linux/arm/v7 ."
+                sh "docker build -t idrisniyi94/mentorship:latest ."
             }
         }
         stage('Trivy Image Scan') {
