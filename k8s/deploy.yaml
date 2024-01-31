@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mentorship
+  namespace: mentorship
+  labels:
+    app: mentorship
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mentorship
+  template:
+    metadata:
+      labels:
+        app: mentorship
+    spec:
+      containers:
+        - name: mentorship
+          image: idrisniyi94/mentorship:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+
